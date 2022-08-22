@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersService } from 'src/services/users.service';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,6 @@ export class AppComponent implements OnInit{
   constructor() {
     
   }
-  ngOnInit(): void {
-    
+  ngOnInit(): void {    
   }
 }
