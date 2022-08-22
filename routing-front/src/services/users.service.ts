@@ -13,6 +13,9 @@ export class UsersService {
   constructor(private http: HttpClient) { }
 
   public getUsers(): Observable<UserInterface[]> {
-    return this.http.get<UserInterface[]>(`${environment.endpointUrl}`);
+    return this.http.get<UserInterface[]>(`${environment.endpointUrl}/api/users`);
+  }
+  public getUser(id: number): Observable<UserInterface> {
+    return this.http.get<UserInterface>(`${environment.endpointUrl}/api/users/${id}`);
   }
 }

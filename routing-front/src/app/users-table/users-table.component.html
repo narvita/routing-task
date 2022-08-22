@@ -1,0 +1,23 @@
+<table p-table >
+  <tr p-Template="header">
+    <th>Id</th>
+    <th>Name</th>
+    <th>Created On</th>
+    <th>Owner</th>
+    <th>Action</th>  
+  </tr>
+  <tr *ngFor="let user of users" p-Template="body">
+    <td>  
+      {{user.id}}
+    </td>
+    <td>  
+      {{user.name}}
+    </td>
+    <td>  
+      {{user.createdDate}}
+    </td>
+    <td>
+      <a [routerLink]="['/accounts' + user.id]">View</a>
+    </td>
+  </tr>
+</table>
